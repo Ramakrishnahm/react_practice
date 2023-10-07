@@ -24,7 +24,7 @@ const Data = () => {
           {item.title}
           {item.complete}
           <div className="list-buttons">
-            {click && <p>show 5 items</p>}
+           
             <input
               type="checkbox"
               onChange={(e) => setInput(e.target.checked)}

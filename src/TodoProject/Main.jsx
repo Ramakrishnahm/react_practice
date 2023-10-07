@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import Data from "./Data";
-import 'App.css'
+
 
 const Main = () => {
   const [input, setInput] = useState("");

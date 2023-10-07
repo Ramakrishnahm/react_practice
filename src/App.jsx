@@ -1,13 +1,15 @@
 
-// import Main from './TodoProject/Main'
+ import Main from './TodoProject/Main'
+import Accordion from './practice/Accordion'
 import Practice from "./practice/Practice"
-// import "App.css"
+
 
 const App = () => {
   return(
     <div>
-    <Practice/>
-{/* <Main/> */}
+    <Practice/> 
+    <Main/> 
+    <Accordion/>
     </div>
   )
 }

@@ -1,37 +1,41 @@
-import { useState } from 'react';
-import './Style.css'
+import { useState } from "react";
+import "./Style.css";
 
-const Practice = () =>{
-    const [data,setData] =  useState(["a","b","c","d","e"])
-    const[additem,setAddItem] = useState('')
+const Practice = () => {
+  const [data, setData] = useState(["a", "b", "c", "d", "e"]);
+  const [additem, setAddItem] = useState("");
 
-    const deleteHandle = (index) => {
-        const newData = data.filter((x,idx) => idx !== index);
-       
-          setData(newData)
-    }
+  const deleteHandle = (index) => {
+    const newData = data.filter((x, idx) => idx !== index);
 
-    const handleChange = (ev) => {
-        
-        
-        setAddItem(ev.target.value)
-      };
+    setData(newData);
+  };
 
-    return(
-        <div className="data-container">
-         
-            {data.map((item,index) =>(
-                <button  key = {index} className="data-list" onClick ={() =>{deleteHandle(index)}} >{item}</button>
-            ))}
+  const handleChange = (ev) => {
+    setAddItem(ev.target.value);
+  };
 
-            {additem}
-
-            <input type = "text" name = "text" value = {additem}  onChange={handleChange}/>
-            <button onClick={() => setData((prev) => [...prev,additem])}>Add</button>
+  return (
+    <div className="data-container">
+      {data.map((item, index) => (
+        <div key={index} className="data-list">
+          {item}{" "}
+          <span
+            className="xbtn"
+            onClick={() => {
+              deleteHandle(index);
+            }}
+          >
+            x
+          </span>
         </div>
+      ))}
+      {additem} <br />
+      <br />
+      <input type="text" name="text" value={additem} onChange={handleChange} />
+      <button onClick={() => setData((prev) => [...prev, additem])}>Add</button>
+    </div>
+  );
+};
 
-
-    )
-}
-
-export default Practice
+export default Practice;
