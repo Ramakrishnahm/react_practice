@@ -4,7 +4,7 @@ import axios from "axios";
 const Data = () => {
   const [data, setData] = useState([]);
   const [input, setInput] = useState("");
-  // const [click,setClick] = useState(true)
+  
 
   useEffect(() => {
     axios

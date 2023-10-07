@@ -1,10 +1,13 @@
 
-import Main from './TodoProject/Main'
+// import Main from './TodoProject/Main'
+import Practice from "./practice/Practice"
+// import "App.css"
 
 const App = () => {
   return(
     <div>
-<Main/>
+    <Practice/>
+{/* <Main/> */}
     </div>
   )
 }
