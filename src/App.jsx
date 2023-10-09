@@ -1,15 +1,16 @@
 
- import Main from './TodoProject/Main'
-import Accordion from './practice/Accordion'
-import Practice from "./practice/Practice"
+ import Todo from './practice/todoproject/Todo'
+// import Accordion from './practice/Accordion'
+// import Practice from "./practice/Practice"
 
 
 const App = () => {
   return(
     <div>
-    <Practice/> 
-    <Main/> 
-    <Accordion/>
+       {/* <Accordion/>
+    <Practice/>  */}
+    <Todo/> 
+   
     </div>
   )
 }
