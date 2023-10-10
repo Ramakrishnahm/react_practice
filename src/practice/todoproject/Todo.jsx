@@ -7,6 +7,7 @@ import "./Styles.css";
 const Data = ({input}) => {
   const [data, setData] = useState([]);
   const[isActive,setIsActive] = useState(true)
+ 
 
   useEffect(() => {
     axios
@@ -18,6 +19,9 @@ const Data = ({input}) => {
     const filterTodo = data.filter((x) => x.id !== id);
     setData(filterTodo);
   };
+
+  
+
 
   return (
     <div>
@@ -45,6 +49,16 @@ const Data = ({input}) => {
 };
 const Todo = () => {
   const [input, setInput] = useState("");
+  const [searchText,setSearchText] = useState("")
+  const[data,setData] = useState([])
+
+  function filterData(searchText, data) {
+    const filterData = data.filter((item) =>
+      item.title.toLowerCase()?.includes(searchText.toLowerCase())
+    );
+  
+    return filterData;
+  }
 
   return (
     <div>
@@ -53,13 +67,18 @@ const Todo = () => {
       <input
         type="text"
         name="text"
-        value={input}
+        value={searchText}
         placeholder="Enter Todo Item"
-        onChange={(e) => setInput(e.target.value)}
+        onChange={(e) => setSearchText(e.target.value)}
       />
-      <button className="add-btn"
-      onClick={() => setData((prev) => [...prev, input])}
-      >ADD ITEM</button>
+      <button className="search-btn"
+       onClick={() => {
+       ta
+        const filterTextData = filterData(searchText, data);
+       
+        setData(filterTextData);
+      }}
+      >Search</button>
      
        <Data />
     </div>

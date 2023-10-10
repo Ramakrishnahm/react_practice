@@ -1,0 +1,29 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: center;
+    border: 1px solid black;
+    gap: 5px;
+    width: 100px;
+    border-radius: 5px;
+    cursor: pointer;
+    
+  }
+  
+  .btn1{
+    padding-right: 1px;
+    margin-right: 2px;
+    color: blue;
+  }
+  
+  .btn2{
+    padding-right: 1px;
+   color: blue;
+   
+  }
+  
+  
+  
