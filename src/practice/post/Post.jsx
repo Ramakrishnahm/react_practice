@@ -5,7 +5,7 @@ const Post = () => {
   const [values, setValues] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/posts")
+    fetch("http://localhost:3000/students")
       .then((res) => res.json())
       .then((json) => setValues(json));
     console.log(values);
@@ -13,9 +13,9 @@ const Post = () => {
 
   const handlePost = () => {
     axios
-      .post("http://localhost:3000/posts", {
-        title: "Fred",
-        author: "Flintstone",
+      .post("http://localhost:3000/students", {
+        name: "Fred",
+        fathername: "Flintstone",
       })
       .then(function (response) {
         console.log(response);
@@ -23,16 +23,18 @@ const Post = () => {
   };
 
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:3000/posts/${id}`).then(function (response) {
-      console.log(response);
-    });
+    axios
+      .delete(`http://localhost:3000/students${1}`)
+      .then(function (response) {
+        console.log(response);
+      });
   };
 
   const handlePut = (id) => {
     axios
-      .put(`http://localhost:3000/posts/${9}`, {
-        title: "React",
-        author: "Facebook",
+      .put(`http://localhost:3000/students${3}`, {
+        name: "rohit",
+        fathername: "rahul",
       })
       .then(function (response) {
         console.log(response);
@@ -40,8 +42,8 @@ const Post = () => {
   };
   const handlePatch = (id) => {
     axios
-      .patch(`http://localhost:3000/posts/${9}`, {
-        title: "Angular",
+      .patch(`http://localhost:3000/students${5}`, {
+        name: "root",
       })
       .then(function (response) {
         console.log(response);
@@ -51,7 +53,6 @@ const Post = () => {
   return (
     <div>
       <div>
-        {/* { JSON.stringify(values)} */}
         {values.map((value) => (
           <div key={value.id}>
             {value.title} {value.author}{" "}
@@ -65,7 +66,8 @@ const Post = () => {
       </div>
 
       <button onClick={handlePost}>Axios Post</button>
-      <button onClick={handlePatch}>Axios Put</button>
+      <button onClick={handlePatch}>Axios Patch</button>
+      <button onClick={handlePut}>Axios Put</button>
     </div>
   );
 };
