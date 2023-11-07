@@ -5,9 +5,12 @@
 // import LikeIcon from "./practice/likebutton/LikeIcon"
 // import Post from "./practice/post/Post"
 // import Crud from './practice/crudoperation/Crud'
-import FetchApi from './practice/fetchapi/FetchApi'
+// import FetchApi from './practice/fetchapi/FetchApi'
+// import Header from './practice/formbricks/FormBricks'
 // import FilterData from './practice/filterdata/FilterData'
-import Pagination from './practice/pagination/Pagination'
+// import Pagination from './practice/pagination/Pagination'
+import FormBricks from "./practice/formbricks/FormBricks"
+
 
 
 
@@ -19,9 +22,10 @@ const App = () => {
       {/* <Post/> */}
       {/* // <Crud/> */}
       {/* <FilterData/> */}
-      {/* <FetchApi/> */}
-      <Pagination/>
-   
+      {/* <FetchApi/>
+      <Pagination/> */}
+   {/* <Header/> */}
+   <FormBricks/>
     </div>
   )
 }

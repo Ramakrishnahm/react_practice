@@ -32,7 +32,7 @@ const App = () => {
 
   const handleDelete = (id) => {
     axios
-      .delete(`http://localhost:3000/students/${4}`)
+      .delete(`http://localhost:3000/students/${5}`)
       .then(function (response) {
         console.log(response);
       });
